@@ -19,6 +19,13 @@ const config: HardhatUserConfig = {
   networks: {
     localhost: {
       chainId: 31337,
+      gas: 21000000,
+      allowUnlimitedContractSize: true,
+    },
+    hardhat: {
+      chainId: 31337,
+      gas: 21000000,
+      allowUnlimitedContractSize: true,
     },
     sepolia: {
       url: process.env.SEPOLIA_RPC_URL,
