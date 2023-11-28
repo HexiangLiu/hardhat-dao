@@ -7,6 +7,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Box is Ownable {
     uint256 private value;
 
+    constructor() Ownable(msg.sender) {}
+
     // Emitted when the stored value changes
     event ValueChanged(uint256 newValue);
 

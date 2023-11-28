@@ -6,7 +6,16 @@ import 'hardhat-deploy-ethers';
 import 'dotenv/config';
 
 const config: HardhatUserConfig = {
-  solidity: '0.8.19',
+  solidity: {
+    compilers: [
+      {
+        version: '0.8.19',
+      },
+      {
+        version: '0.8.20',
+      },
+    ],
+  },
   networks: {
     localhost: {
       chainId: 31337,
